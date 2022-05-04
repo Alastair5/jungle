@@ -1,10 +1,9 @@
-<% if enhanced_cart.length > 0 %>
 <section class="cart-show">
 
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+<% if enhanced_cart.length > 0 %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -50,9 +49,10 @@
     </div>
   </div>
 
-</section>
+  <% else %>
+    <div class="panel panel-default items alert alert-danger empty">
+      <h4><b>Oops! Your cart is empty. Please add items to your cart <%= link_to "here", root_path %>.</b></h4>
+    </div>
+  <% end %>
 
-<% end %>
-<br/>
-<div class="alert alert-danger" role="alert">Oops! Your cart is Empty</div>
-<%= link_to 'Home', controller = 'products#index' %>
+</section>
