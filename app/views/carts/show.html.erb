@@ -1,3 +1,4 @@
+<% if enhanced_cart.length > 0 %>
 <section class="cart-show">
 
   <header class="page-header">
@@ -50,3 +51,8 @@
   </div>
 
 </section>
+
+<% end %>
+<br/>
+<div class="alert alert-danger" role="alert">Oops! Your cart is Empty</div>
+<%= link_to 'Home', controller = 'products#index' %>
