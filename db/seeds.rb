@@ -47,7 +47,7 @@ cat1.products.create!({
   They rely on animal pollination to reproduce. To promote pollination, they produce aromatic scents.",
   image: open_asset('plante_1.jpg'),
   quantity: 0,
-  price: 64.99
+  price: 55.99
 })
 
 cat1.products.create!({
